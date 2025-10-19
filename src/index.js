@@ -1,6 +1,7 @@
 import express from "express";
 import { PORT } from "./config/server.config.js";
 import apiRouter from "./routes/apiRoutes.js";
+import errorHandler from "./utils/errorHandler.js";
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.get("/ping", (req, res) => {
 
 //if any request comes and route starts with /api, map it to apiRouter
 app.use("/api", apiRouter);
+
+app.use(errorHandler)
 
 app.listen(PORT, () => {
   console.log(`Server is listening on PORT: ${PORT}`);
