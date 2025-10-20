@@ -13,17 +13,33 @@ export function addProblem(req, res, next) {
 }
 
 export function getProblem(req, res) {
-  res.status(StatusCodes.NOT_IMPLEMENTED).json({ message: "NOT IMPLEMENTED" });
+  try {
+    throw new NotImplemented("getProblem");
+  } catch (error) {
+    next(error);
+  }
 }
 
 export function getProblems(req, res) {
-  res.status(StatusCodes.NOT_IMPLEMENTED).json({ message: "NOT IMPLEMENTED" });
+  try {
+    throw new NotImplemented("getProblems");
+  } catch (error) {
+    next(error);
+  }
 }
 
 export function deleteProblem(req, res) {
-  res.status(StatusCodes.NOT_IMPLEMENTED).json({ message: "NOT IMPLEMENTED" });
+  try {
+    throw new NotImplemented("deleteProblem");
+  } catch (error) {
+    next(error);
+  }
 }
 
 export function updateProblem(req, res) {
-  res.status(StatusCodes.NOT_IMPLEMENTED).json({ message: "NOT IMPLEMENTED" });
+  try {
+    throw new NotImplemented("updateProblem");
+  } catch (error) {
+    next(error);
+  }
 }

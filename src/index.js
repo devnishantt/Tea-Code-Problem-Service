@@ -16,7 +16,7 @@ app.get("/ping", (req, res) => {
 //if any request comes and route starts with /api, map it to apiRouter
 app.use("/api", apiRouter);
 
-app.use(errorHandler)
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server is listening on PORT: ${PORT}`);
