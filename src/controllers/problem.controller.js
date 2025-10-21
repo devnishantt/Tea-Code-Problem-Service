@@ -12,7 +12,7 @@ export function addProblem(req, res, next) {
   }
 }
 
-export function getProblem(req, res) {
+export function getProblem(req, res, next) {
   try {
     throw new NotImplemented("getProblem");
   } catch (error) {
@@ -20,7 +20,7 @@ export function getProblem(req, res) {
   }
 }
 
-export function getProblems(req, res) {
+export function getProblems(req, res, next) {
   try {
     throw new NotImplemented("getProblems");
   } catch (error) {
@@ -28,7 +28,7 @@ export function getProblems(req, res) {
   }
 }
 
-export function deleteProblem(req, res) {
+export function deleteProblem(req, res, next) {
   try {
     throw new NotImplemented("deleteProblem");
   } catch (error) {
@@ -36,7 +36,7 @@ export function deleteProblem(req, res) {
   }
 }
 
-export function updateProblem(req, res) {
+export function updateProblem(req, res, next) {
   try {
     throw new NotImplemented("updateProblem");
   } catch (error) {

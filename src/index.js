@@ -2,6 +2,7 @@ import express from "express";
 import { PORT } from "./config/server.config.js";
 import apiRouter from "./routes/apiRoutes.js";
 import errorHandler from "./utils/errorHandler.js";
+import connectDB from "./config/dbConfig.js";
 
 const app = express();
 
@@ -18,6 +19,8 @@ app.use("/api", apiRouter);
 
 app.use(errorHandler);
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`Server is listening on PORT: ${PORT}`);
+  await connectDB();
+  console.log("Successfully connected to DB");
 });
